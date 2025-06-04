@@ -4,6 +4,7 @@ import com.vaadin.flow.spring.security.VaadinWebSecurity;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -59,7 +60,7 @@ public class SecurityConfiguration extends VaadinWebSecurity {
   }
 
   @Override
-  protected void configure(HttpSecurity http) throws Exception {
+  protected void configure(@NotNull HttpSecurity http) throws Exception {
 
     // Configure OAuth2 login and logout
     http.authorizeHttpRequests(authorize -> authorize

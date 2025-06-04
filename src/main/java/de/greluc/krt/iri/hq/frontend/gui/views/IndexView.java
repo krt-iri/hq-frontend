@@ -7,7 +7,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 
 @PageTitle("Index")
-@Route(value = "", layout = MainView.class)
+@Route(value = "", layout = MainLayout.class)
 @AnonymousAllowed()
 public class IndexView extends HorizontalLayout {
   public IndexView() {

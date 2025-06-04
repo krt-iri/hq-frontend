@@ -4,15 +4,16 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import jakarta.annotation.security.RolesAllowed;
 
-@PageTitle("Admin")
-@Route(value = "admin", layout = MainLayout.class)
-@RolesAllowed("ADMIN")
-public class AdminView extends HorizontalLayout {
-  public AdminView() {
+@PageTitle("Start")
+@Route(value = "start", layout = MainLayout.class)
+@RolesAllowed({"GUEST", "USER"})
+public class StartView extends HorizontalLayout {
+  public StartView() {
     setPadding(true);
 
-    add(new H1("Admin"));
+    add(new H1("Start"));
   }
 }

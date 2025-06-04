@@ -29,12 +29,12 @@ import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 /**
  * The main view is a top-level placeholder for other views.
  */
-public class MainView extends AppLayout {
+public class MainLayout extends AppLayout {
 
   private final AccessAnnotationChecker accessChecker;
   private H2 viewTitle;
 
-  public MainView(AccessAnnotationChecker accessChecker) {
+  public MainLayout(AccessAnnotationChecker accessChecker) {
     this.accessChecker = accessChecker;
 
     setPrimarySection(Section.DRAWER);
@@ -105,7 +105,7 @@ public class MainView extends AppLayout {
       layout.add(userMenu);
     } else {
       Button login = new Button("Sign in",
-          _ -> UI.getCurrent().getPage().setLocation("/user"));
+          _ -> UI.getCurrent().getPage().setLocation("/start"));
       layout.add(login);
     }
 

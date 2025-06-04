@@ -7,7 +7,7 @@ import com.vaadin.flow.router.Route;
 import jakarta.annotation.security.RolesAllowed;
 
 @PageTitle("User")
-@Route(value = "user", layout = MainView.class)
+@Route(value = "user", layout = MainLayout.class)
 @RolesAllowed("USER")
 public class UserView extends HorizontalLayout {
   public UserView() {
