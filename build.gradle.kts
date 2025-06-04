@@ -36,7 +36,6 @@ dependencies {
   annotationProcessor("org.projectlombok:lombok")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
   testImplementation("org.springframework.security:spring-security-test")
-  testImplementation("org.springframework.restdocs:spring-restdocs-webtestclient")
   testImplementation("org.mockito:mockito-core:${mockitoVersion}")
   mockitoAgent("org.mockito:mockito-core:${mockitoVersion}") { isTransitive = false }
   testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -45,7 +44,7 @@ dependencies {
 base {
   group = "de.greluc.krt.iri.frontend"
   version = "0.0.1"
-  description = "See who griefed you!"
+  description = "Iridium HQ - Frontend"
 }
 
 java {
