@@ -36,4 +36,6 @@ out/
 
 ### VS Code ###
 .vscode/
-frontend/generated/
+/frontend/generated/
+/generated/*
+/generated/
